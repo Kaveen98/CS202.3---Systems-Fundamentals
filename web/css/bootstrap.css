@@ -1603,6 +1603,9 @@ pre code {
   }
 }
 .container-fluid {
+    max-width: 100%; /* Ensures no part of the layout exceeds the viewport width */
+    padding-left: 15px;
+    padding-right: 15px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -4251,11 +4254,72 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-fixed-top,
 .navbar-fixed-bottom {
-  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: 1030;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030; /* Ensure it stays on top */
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    
 }
+
+.body-content {
+    margin-top: 70px; /* Add margin to prevent overlap with fixed navbar */
+}
+/* Image Section */
+.image-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-section img {
+    max-width: 100%; /* Ensure the image doesn't overflow its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+/* Logo and Title */
+.navbar-brand {
+    padding: 5px 15px;
+}
+
+.navbar-brand img {
+    max-height: 40px; /* Ensure logo size is controlled */
+}
+
+.title {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 15px;
+    line-height: 40px;
+}
+
+/* Login Link Styles */
+.login-link {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.login-link:hover {
+    color: darkred;
+    text-decoration: underline;
+}
+
+/* Ensure body content doesn't overlap with navbar */
+body {
+    padding-top: 70px; /* Adjust to match the height of your navbar */
+}
+
 @media (min-width: 768px) {
   .navbar-fixed-top,
   .navbar-fixed-bottom {
@@ -4267,7 +4331,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-width: 0 0 1px;
 }
 .navbar-fixed-bottom {
-  bottom: 0;
+  bottom: -27px;
   margin-bottom: 0;
   border-width: 1px 0 0;
 }
@@ -5449,6 +5513,7 @@ button.list-group-item-danger.active:focus {
 }
 .panel {
   margin-bottom: 20px;
+  overflow: hidden; /* Make sure content stays within the bounds */
   background-color: #fff;
   border: 1px solid transparent;
   border-radius: 4px;

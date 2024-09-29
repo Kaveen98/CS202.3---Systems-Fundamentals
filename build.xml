@@ -7,9 +7,34 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="Hospital_Management_System" default="default" basedir=".">
+<project name="Hospital_Management_System" default="compile" basedir=".">
     <description>Builds, tests, and runs the project Hospital Management System.</description>
+
+    <!-- Include the default NetBeans Ant targets -->
     <import file="nbproject/build-impl.xml"/>
+
+    <!-- Custom target to add the Servlet API to the classpath before compilation -->
+    <target name="-pre-compile">
+        <path id="custom.classpath">
+            <!-- Add the servlet API JAR file to the classpath -->
+            <pathelement location="src/lib/javax.servlet-api-4.0.1.jar"/>
+        </path>
+        <property name="build.sysclasspath" value="ignore"/>
+        <property name="javac.classpath" refid="custom.classpath"/>
+        
+    </target>
+
+    <target name="compile" depends="-pre-compile">
+        <mkdir dir="build"/>
+        <javac srcdir="src" destdir="build" includeantruntime="false">
+            <classpath refid="custom.classpath"/>
+        </javac>
+    </target>
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
     <!--
 
     There exist several targets which are by default empty and which can be 

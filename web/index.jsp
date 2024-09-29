@@ -39,7 +39,7 @@
 		</div>
 		<!--- Header Ends Here --------------------------->
 		
-		<div class="row ">
+                <div class="row " style="padding-top: 50px;">
 			<div class="col-md-12">
 				<div class="panel panel-default login">
 					<div class="panel-heading logintitle">Login</div>
@@ -76,15 +76,17 @@
 								</div>
 						</form>
 					</div>
-		<a href="register_patient.jsp" style="text-align:Center;font-weight:bold;font-size:120%;padding: 0 2%">Register As Patient</a>						
-				</div>
+			
+
+				</div>              
+                            <div><a href="register_patient.jsp" class="register-link">Register As Patient</a></div>
+
 			</div>				
 		</div>
 		
 				<div class="row footer navbar-fixed-bottom">
 			<div class="col-md-12">
-				<div>Designed and Developed By :- </div>
-				<p>Copyrights © Hospital Management System 2017-18. All rights reserved. </p>
+				<p>Copyrights © Hospital Management System 2024. All rights reserved. </p>
 			</div>
 		</div>
 		

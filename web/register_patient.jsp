@@ -25,35 +25,36 @@
 	
 	<div class="container-fluid">
 		<!--- Header --------------------------->
-		<div class="row navbar-fixed-top">
-			<nav class="navbar navbar-default header">
-			<div class="container-fluid">
-				<div class="navbar-header">
-				  <a class="navbar-brand logo" href="#">
-					<img alt="Brand" src="images/logo.png">
-				  </a>
-				  <div class="navbar-text title"><p>Hospital Management System<p></div>
-				</div>
-			</div>
-			</nav>
-		<a href="index.jsp" style="text-align:Center;font-weight:bold;font-size:120%;padding: 0 2%;color:red">LOGIN</a>						
-		</div>
+                                            <div class="row navbar-fixed-top">
+                                <nav class="navbar navbar-default header">
+                                    <div class="container-fluid">
+                                        <div class="navbar-header">
+                                            <a class="navbar-brand logo" href="#">
+                                                <img alt="Brand" src="images/logo.png">
+                                            </a>
+                                            <div class="navbar-text title">
+                                                <p>Hospital Management System</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
+                               
+                            </div>
 		<!--- Header Ends Here --------------------------->
 		
-		<div class="row ">
-			<div class="col-md-12">
-				<div class="panel panel-default login">
-					<div class="panel-heading logintitle">Register As Patient</div>
-					
-					<div class="panel-body">
-                                            <form class="form-horizontal center-block" role="form" action="register_patient_validation.jsp" method="post">
+		<div class="row">
+                    <div class="col-md-8" style=" margin-left: -80px;margin-right: -40px;padding: -100px;">
+                                        <div class="panel panel-default login">
+                                            <div class="panel-heading logintitle">Register As Patient</div>
+                                            <div class="panel-body">
+                                                <form class="form-horizontal center-block" role="form" action="register_patient_validation.jsp" method="post">
 							
                                                         <div class="form-group">
-															<label  class="col-sm-2 control-label">Patient Id:</label>
-															 <div class="col-sm-10">
+			<label  class="col-sm-2 control-label">Patient Id:</label>
+			 <div class="col-sm-10">
                                                                 <input type="number" class="form-control" name="patientid" placeholder="unique_id auto generated" readonly>
-															</div>
-												        </div>
+							</div>
+						        </div>
                                                                                                      
 									<div class="form-group">
 								<label  class="col-sm-2 control-label">Name</label>
@@ -151,21 +152,41 @@
                                                             </div>
 
 							 <div class="form-group">
-								<div class="col-sm-7 col-sm-offset-2" style="margin:0 0 0 40%">
-								  <button type="submit" class="btn btn-primary">Register As Patient Now</button>
-								</div>
-							  </div>
+                                                                                                                                    <div class="form-group">
+                                                                                                                                        <div class="row" style="margin-left: 100px;">
+                                                                                                                                        <!-- Left-aligned Register Button, centered within the left column -->
+                                                                                                                                        <div class="col-sm-6 d-flex justify-content-center">
+                                                                                                                                            <button type="submit" class="btn btn-primary">Register As Patient Now</button>
+                                                                                                                                        </div>
+
+                                                                                                                                        <!-- Right-aligned Login Button, centered within the right column -->
+                                                                                                                                        <div class="col-sm-6 d-flex justify-content-center">
+                                                                                                                                            <a href="index.jsp" class="btn btn-primary">LOGIN</a>
+                                                                                                                                        </div>
+                                                                                                                                    </div>
+                                                                                                                                </div>
+
+                                                                                                                                </div>
+
 								<br><Br><Br>
 					
 						</form>
-					</div>					
-				</div>
-			</div>				
-		</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="image-section">
+                                                                           
+                                                                            <img src="images/HMS.png" alt="Patient Registration Image" style="max-width: 32%; padding-top: 200px; padding-right: 15px; position: fixed; top: 0; right: 15px; z-index: 1000;">
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                
 		
 				<div class="row footer navbar-fixed-bottom">
 			<div class="col-md-12">
-				<div>Designed and Developed By :- </div>
+				
 				<p>Copyrights © Hospital Management System 2017-18. All rights reserved. </p>
 			</div>
 		</div>	

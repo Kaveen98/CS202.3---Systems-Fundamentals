@@ -81,8 +81,8 @@
 		
 				<div class="row footer navbar-fixed-bottom">
 			<div class="col-md-12">
-				<div>Designed and Developed By :- </div>
-				<p>Copyrights © Hospital Management System 2017-18. All rights reserved. </p>
+				
+				<p>Copyrights © Hospital Management System 2024. All rights reserved. </p>
 			</div>
 		</div>
 		
