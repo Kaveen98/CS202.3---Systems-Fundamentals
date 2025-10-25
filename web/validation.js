@@ -1,24 +1,24 @@
+/**
+ * Validation utilities for Hospital Management System
+ * Provides client-side validation and AJAX functionality
+ */
+
 var request;
-function createRequest()
-{
-	try
-	{
-		request=new XMLHttpRequest();
-	}
-	catch(exc)
-	{
-		try
-		{
-			request=new ActiveXObject("MSxml2.XMLHTTP");
-		}
-		catch(exc)
-		{
-			try
-			{
-				request=new ActiveXObject("Microsoft.XMLHTTP");
-			}
-			catch(exc)
-			{
+
+/**
+ * Creates an XMLHttpRequest object with cross-browser compatibility
+ * @returns {XMLHttpRequest|null} XMLHttpRequest object or null if not supported
+ */
+function createRequest() {
+    try {
+        request = new XMLHttpRequest();
+    } catch (exc) {
+        try {
+            request = new ActiveXObject("MSxml2.XMLHTTP");
+        } catch (exc) {
+            try {
+                request = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (exc) {
 				request=null;
 			}
 		}
