@@ -10,8 +10,8 @@ public class ConnectionDao implements ServletContextListener
 	{
 		try
 		{
-			Class.forName("com.mysql.jdbc.Driver");
-			Connection c=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospital","root","");
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection c=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospital?useSSL=false&serverTimezone=UTC","root","");
 			c.setHoldability(ResultSet.CLOSE_CURSORS_AT_COMMIT); 
 			ServletContext ctx=e.getServletContext();
 			ctx.setAttribute("connection",c);
